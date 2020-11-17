@@ -1,0 +1,117 @@
+div#chat {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  width: 350px;
+  transition: height 0.4s ease-out;
+  /* FIXME: height transition isn't work for non-px values */
+}
+
+#chat-header {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 7px 7px 0 0;
+  padding: 20px;
+  width: 100%;
+  color: white;
+  background-color: #2666e6;
+  box-shadow: 0 0 20px 4px rgba(0, 0, 160, 0.32);
+  transition: padding 0.1s ease-out;
+  cursor: pointer;
+  z-index: 2;
+}
+
+div#chat:not(.opened) > header:hover {
+  padding-bottom: 25px;
+}
+
+div#chat > header > svg {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+div#opened-chat {
+  display: none;
+  padding: 10px;
+}
+
+div#chat.opened {
+  height: 400px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px 6px 0 0;
+}
+
+div#chat.opened > div#opened-chat {
+  display: block;
+}
+
+div#request-received {
+  display: none;
+  background-color: #dddddd;
+  color: #000000;
+  font-size: 0.9em;
+  padding: 45px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+div#opened-chat input {
+  display: block;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+div#chat-start {
+  width: 100%;
+  text-align: center;
+  color: #bbbbbb;
+  margin-top: 50px;
+}
+
+input#message {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  display: block;
+  width: 330px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#message-send {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+div#user-form {
+  display: none;
+  box-sizing: border-box;
+  height: 310px;
+  overflow-y: overlay;
+}
+
+div#user-form > input {
+  width: 100%;
+  margin: 20px 0;
+}
+
+div#user-form > button {
+  background-color: #17b92a;
+  border-radius: 999px;
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 35px;
+  cursor: no-drop;
+}
